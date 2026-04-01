@@ -615,6 +615,136 @@ nav.scrolled {
   color: var(--dark);
 }
 
+/* ============ RÉALISATIONS ============ */
+
+.realisations {
+  background: var(--dark);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.realisations-header {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 5rem;
+}
+
+.realisations-sub {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.realisations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.realisation-card {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--dark3);
+  transition: transform 0.3s, border-color 0.3s;
+  display: block;
+}
+
+.realisation-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(201,168,76,0.4);
+}
+
+.realisation-preview {
+  position: relative;
+  height: 200px;
+  background: var(--dark2);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.realisation-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(201,168,76,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.realisation-card:hover .realisation-overlay { opacity: 1; }
+
+.realisation-overlay span {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.realisation-mockup {
+  width: 85%;
+  background: var(--dark3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mockup-bar {
+  background: var(--dark);
+  padding: 0.6rem 1rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.mockup-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.4;
+}
+
+.mockup-url {
+  padding: 0.5rem 1rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.realisation-info {
+  padding: 1.8rem;
+}
+
+.realisation-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.realisation-info p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.realisation-link {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
 /* ============ CONTACT ============ */
 
 .contact {
@@ -777,6 +907,7 @@ nav.scrolled {
   .section { padding: 5rem 1.5rem; }
   .footer { padding: 2rem 1.5rem; }
 
+  .realisations-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
   .services-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
