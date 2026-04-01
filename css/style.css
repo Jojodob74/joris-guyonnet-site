@@ -154,25 +154,23 @@ nav.scrolled {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 5rem;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .hero-bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 65%),
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 65%),
     radial-gradient(ellipse 50% 70% at 10% 90%, rgba(201,168,76,0.03) 0%, transparent 55%);
 }
 
 .hero-line {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 58%;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent 0%, var(--gold) 50%, transparent 100%);
+  display: none;
   opacity: 0.1;
 }
 
@@ -190,10 +188,19 @@ nav.scrolled {
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
 .hero-eyebrow::before {
+  content: '';
+  width: 35px;
+  height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.hero-eyebrow::after {
   content: '';
   width: 35px;
   height: 1px;
@@ -221,8 +228,8 @@ nav.scrolled {
   font-size: 1.05rem;
   color: var(--muted);
   line-height: 1.85;
-  max-width: 500px;
-  margin-bottom: 3rem;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
 }
 
 .hero-cta {
