@@ -658,12 +658,19 @@ nav.scrolled {
 
 .realisation-preview {
   position: relative;
-  height: 200px;
-  background: var(--dark2);
+  height: 220px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.realisation-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.realisation-card:hover .realisation-preview img {
+  transform: scale(1.05);
 }
 
 .realisation-overlay {
